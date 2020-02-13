@@ -1,0 +1,34 @@
+#include <iostream>
+#include <iomanip>
+#include <limits>
+
+using namespace std;
+
+int main() {
+    int i = 4;
+    double d = 4.0;
+    string s = "HackerRank ";
+
+
+    int i1;
+    double d1;
+    string ss;
+  
+        cin>>i1;cin>>d1;cin.ignore(); 
+        
+        /*People starting to learn C++ might suffer if they aren't familiar with cin >> and getline() and what happens if you use both
+        of them together. Using cin leaves an end of line character which is then read by your getline(); It is best not to mix different
+        types of input.The solution one could use to overcome this problem is to use a different input method. 
+        On the other hand, it is always nice to get familiar with problems one might come across while coding, so take a look. 
+        It is possible to overcome this problem while keeping all of your code and just adding a single line.*/
+        
+        getline(cin,ss);
+ d1=d1+d;
+ cout<<i+i1<<endl<<fixed<<setprecision(1)<<d1<<endl<<s<<ss;
+ //to get 8.0
+
+
+
+
+    return 0;
+}
