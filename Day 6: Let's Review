@@ -1,0 +1,45 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+#include <limits>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+char string[1000000]; 
+int testcase ;
+cin>>testcase;
+for(int i=0;i<testcase;i++)
+    {   
+        cin.ignore(); 
+        cin>>string;
+      
+
+        int odd=1,even=0; 
+        char ch;
+
+        while(string[even]!='\0')
+        {
+            cout<<string[even];
+            string[even]='\0';
+            even=even+2;
+        }
+        cout<<" ";
+        while(string[odd]!='\0')
+        {
+            cout<<string[odd];
+            string[odd]='\0';
+            odd=odd+2;
+        }
+         cout<<" "<<endl;
+
+    }
+
+
+    return 0;
+}
+
