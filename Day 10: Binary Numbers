@@ -1,0 +1,53 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+int globalcount=0;
+
+void decToBinary(int n) 
+{ 
+    // array to store binary number 
+    int binaryNum[32]; 
+  int binaryNumb[32]; 
+    // counter for binary array 
+    int i = 0; 
+    while (n > 0) { 
+  
+        // storing remainder in binary array 
+        binaryNum[i] = n % 2; 
+        n = n / 2; 
+        i++; 
+    } 
+    int k=0;
+    // printing binary array in reverse order 
+    for (int j = i - 1; j >= 0; j--) 
+    {
+         binaryNumb[k++]=binaryNum[j]; 
+        // cout<<binaryNum[j]; 
+    }
+    int count=0;
+    for(int p=0;p<=k;p++)
+    {
+        if(binaryNumb[p]==0)
+        {
+            if(globalcount<count){globalcount=count;}
+            count=0;
+            continue;
+            
+            }
+            count++;
+    }    
+            cout<<globalcount;
+} 
+
+
+int main()
+{
+    int n;
+    cin >> n;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+ 
+    decToBinary(n); 
+   
+
+    return 0;
+}
