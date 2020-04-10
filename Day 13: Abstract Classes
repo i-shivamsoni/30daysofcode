@@ -19,11 +19,13 @@ class Book{
 };
 
    class MyBook : public Book{
-       int price;
+     int price;
+     public:
 // Write your MyBook class here
-        Mybook(string title,string author,int price1) : Book(title,author) {
-        price =price1;
+        MyBook(string title,string author,int price1) : Book(title,author) {
+            price=price1;
         }
+       
     //   Class Constructor
     //   
     //   Parameters:
