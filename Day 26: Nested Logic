@@ -1,0 +1,36 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int fine = 0;
+    int reday = 0, remon = 0, reyear = 0, subday = 0, submon = 0, subyear = 0;
+    cin >> subday >> submon >> subyear;
+    cin >> reday >> remon >> reyear;
+
+    if (reday >= subday && remon == submon && reyear == subyear)
+    {
+        fine = 0;
+    }
+    else if (reday <= subday && remon == submon && reyear == subyear)
+    {
+        fine = 15 * (subday - reday);
+    }
+    else if (remon <= submon && reyear == subyear)
+    {
+        fine = 500 * (submon - remon);
+    }
+
+    else if (reyear < subyear)
+    {
+        fine = 10000;
+    }
+
+    cout << fine;
+    return 0;
+}
