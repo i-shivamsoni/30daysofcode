@@ -27,11 +27,13 @@ class Solution{
               {
                     if(trv->data==trv->next->data)
                     {
-                        if(trv->next->next!=NULL){
-                        trv->next =trv->next->next;}
+                       
+                        trv->next =trv->next->next;
                          
-                        if(trv->next->next==NULL){trv->next->next=NULL; trv =trv->next;                                 break;}
+                        
                     }
+
+                    else
                     trv =trv->next;
                   
               }
