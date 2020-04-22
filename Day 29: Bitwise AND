@@ -1,0 +1,52 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+
+
+int test;
+cin>>test;
+for (int r = 0; r < test; r++)
+{
+   
+
+
+    int num=0,k=0;
+     cin >> num>>k;
+
+    int array [num];
+
+    for (int i = 0; i < num; i++)
+    {
+        array[i]=0;
+         array[i]=i+1;
+    }
+        int j =0 ;
+    int andorp=0;
+    int a=0,b=0;
+    int com = 0;
+    for (int i = 0; i < num -1; i++)
+    {
+        for ( j = i; j < num; j++)
+        {
+            if(j==i){continue;}
+            a =array[i];
+            b = array[j];
+            andorp = a&b;
+            if(andorp>com&&andorp<k){ com = andorp; } 
+        }
+        
+        
+    }
+
+   cout<<com<<endl;
+
+}
+
+    return 0;
+}
